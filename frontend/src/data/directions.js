@@ -1,0 +1,130 @@
+export const SCREENS = [
+  { id: "welcome", label: "Welcome" },
+  { id: "home", label: "Home" },
+  { id: "cycle", label: "Cycle" },
+  { id: "log", label: "Log" },
+  { id: "insights", label: "Insights" },
+  { id: "settings", label: "Privacy" },
+];
+
+export const DIRECTIONS = [
+  {
+    id: "almanac",
+    num: "01",
+    name: "Almanac",
+    tagline: "Warm editorial wellness",
+    line: "A private journal printed on warm paper.",
+    mood: "Pomi as a beautifully set private journal. Serif headlines, ruled margins and pomegranate ink give the app the composure of a well-made magazine. Your cycle is written about, not gamified: unhurried, literate and quietly intimate.",
+    palette: [
+      { name: "Paper", hex: "#FBF7F0" }, { name: "Vellum", hex: "#F3ECE0" }, { name: "Ink", hex: "#2C1810" }, { name: "Sepia", hex: "#6E5B53" },
+      { name: "Pomegranate", hex: "#7D2638" }, { name: "Blush wash", hex: "#F4E6E8" }, { name: "Terracotta", hex: "#B8604F" }, { name: "Rule", hex: "#E3D8C3" },
+    ],
+    paletteNote: "Warm paper neutrals carry 90% of every screen. Pomegranate is the single voice colour, used like ink for actions and recorded days; terracotta marks estimates of fertility so they never compete with the period itself.",
+    fonts: { display: "Playfair Display", displayClass: "ff-play", text: "Source Sans 3", textClass: "ff-source" },
+    typeNote: "Playfair Display for headlines and numerals, with italics for asides and estimates. Source Sans 3 for reading text and tracked small-caps labels (10px, 0.24em). Hierarchy comes from scale contrast, 68px day number against 15px body, rather than colour or weight.",
+    components: [
+      ["Buttons", "Squared 3px corners. A solid pomegranate primary set in the serif; a ghost secondary with a 25% ink hairline. One primary per screen."],
+      ["Cards", "Almost none. Content sits on the page, separated by hairline and double rules, like columns in print. The only boxed area is the footnote on estimates."],
+      ["Inputs", "Choices read as words: the selected one turns pomegranate italic with an underline. Notes are written on a faintly ruled page in italic serif."],
+    ],
+    screens: {
+      welcome: "Roman-numeral steps (I–III), a line-engraved pomegranate, and a three-line privacy promise before any question is asked. Setup uses a printed 28-day grid and a large serif stepper.",
+      home: "A masthead with the date, the cycle day set as a 68px headline, and a daily note with a drop cap. Next period and fertile window sit side by side, each captioned 'Estimated'.",
+      cycle: "A printed month: recorded period as solid ink circles, estimated period as dashed outlines, fertile days as a terracotta wash. Tap any day to read or write its margin note.",
+      log: "Five numbered sections (i–v) on one page. No icons, no sliders: just words you tap and a ruled area to write in your own voice. Saving says 'Kept on this device'.",
+      insights: "A monthly 'Review' with a headline finding, a single line chart, a ranked 'most noted' list and three plain-language takeaways, closed by a footnote on how estimates work.",
+      settings: "'Your record, on your terms.' Every control is explained in one sentence; deletion is confirmed inline in honest wording; exports are framed as 'a copy for your doctor'.",
+    },
+    premium: [
+      "Editorial restraint signals care: generous margins, one accent colour, hierarchy carried entirely by type.",
+      "Copy is written like a thoughtful columnist: calm, specific, never alarmist or cheerleading.",
+      "Estimates are always captioned as such, and the Review page explains the method in a footnote.",
+      "Privacy is stated on the first screen, before any personal data is requested.",
+    ],
+    different: [
+      "No decorative icons, stickers or streaks. Symptoms are words, not emoji.",
+      "Pink appears only as a pale wash; the voice colour is a deep, adult pomegranate.",
+      "It feels like a journal you would keep for years, not a game you would play for a week.",
+    ],
+  },
+  {
+    id: "ledger",
+    num: "02",
+    name: "Ledger",
+    tagline: "Clinical-luxury balance",
+    line: "A calm instrument with the error bars showing.",
+    mood: "Pomi as a precise, quietly luxurious instrument. A Swiss grid, hairline rules and tabular figures present the cycle as clear, legible data, with deep berry as the only warm signal and privacy status always visible. Confident, factual, never cold.",
+    palette: [
+      { name: "Bone", hex: "#F5F4F1" }, { name: "White", hex: "#FFFFFF" }, { name: "Carbon", hex: "#17171A" }, { name: "Graphite", hex: "#2D2D2E" },
+      { name: "Slate", hex: "#6B6B70" }, { name: "Deep berry", hex: "#5A1A2B" }, { name: "Berry tint", hex: "#EFE3E6" }, { name: "Hairline", hex: "#DCDBD6" },
+    ],
+    paletteNote: "A warm bone base keeps the monochrome from turning clinical. Deep berry marks only what matters: recorded period, the primary action, the next estimate. Estimates use hatching instead of a second colour, so the meaning survives greyscale and colour-blindness.",
+    fonts: { display: "Instrument Sans", displayClass: "ff-inst", text: "IBM Plex Mono", textClass: "ff-plex" },
+    typeNote: "Instrument Sans for headings and body: tight, contemporary and humane. IBM Plex Mono with tabular figures for every number, date and label, so data aligns in columns and reads as measured rather than guessed.",
+    components: [
+      ["Buttons", "Sharp 0px rectangles with uppercase mono labels (0.18em). Berry fill for the single primary action; white with a hairline for secondary."],
+      ["Cards", "Replaced by data cells in a ruled 1px grid. Each cell carries a mono label, a value, and its range or source underneath."],
+      ["Inputs", "Segmented scales and square checkboxes show every option at once. Nothing is hidden behind menus; focus states switch the hairline to berry."],
+    ],
+    screens: {
+      welcome: "Three numbered commitments in a table (on-device storage, no ad networks, estimates labelled) come before setup. The CTA states the time cost: 'about 2 min'. Inputs are numbered 01 and 02.",
+      home: "A 2×2 ledger of cycle day, next period, fertile window and average cycle, each with its ± range, plus a segmented cycle map with the current day raised.",
+      cycle: "A square-cell month grid, solid for recorded and hatched for estimated, with a cycle history table of start date, length and period days underneath.",
+      log: "A structured form: date strip, segmented flow scale, checkbox grids for mood and symptoms, a 3-step energy scale, a character-counted note and a timestamped save receipt.",
+      insights: "Average, range and variation as KPIs, a bar chart of cycle lengths against the mean, a symptom frequency table and observations closed by a 'Method' note.",
+      settings: "A data ledger: entries stored, location, encryption, third-party SDKs (0). Controls, export formats and a two-step erase. Privacy is presented as a spec, not a slogan.",
+    },
+    premium: [
+      "Precision is reassuring: ranges and confidence are shown, never hidden behind a single confident date.",
+      "Monochrome plus one berry accent reads like a luxury watch face, not a hospital chart.",
+      "The persistent 'On device' badge makes privacy something you can check at a glance.",
+      "Grid and type discipline signal a product built by people who sweat the details.",
+    ],
+    different: [
+      "No phase mascots or coloured blobs. The data is drawn honestly in a grid.",
+      "Avoids sterile medical blue; warmth comes from bone paper and berry ink.",
+      "Treats the user as an adult who wants the facts, and the error bars.",
+    ],
+  },
+  {
+    id: "bloom",
+    num: "03",
+    name: "Bloom Kit",
+    tagline: "Soft modern feminine utility",
+    line: "A well-made everyday tool, logged in two taps.",
+    mood: "Pomi as a beautifully made everyday tool. Soft ceramic tones, rounded shapes and big tactile chips make logging a two-second, one-thumb habit. Warm and feminine with no sugar: closer to good skincare packaging than to a toy.",
+    palette: [
+      { name: "Oat", hex: "#F8F3EC" }, { name: "White", hex: "#FFFFFF" }, { name: "Cocoa", hex: "#2B2523" }, { name: "Taupe", hex: "#7A6F6A" },
+      { name: "Dusty rose", hex: "#A65E66" }, { name: "Rose petal", hex: "#C9898C" }, { name: "Rose milk", hex: "#F5E3E1" }, { name: "Clay", hex: "#D4A090" }, { name: "Sand", hex: "#EADFCF" },
+    ],
+    paletteNote: "Tonal and quiet: oat and sand surfaces, rose milk for selected states, and a dusty rose dark enough to carry white text at AA contrast. Clay marks fertile estimates so the palette stays in one warm family.",
+    fonts: { display: "Outfit", displayClass: "ff-outfit", text: "DM Sans", textClass: "ff-dm" },
+    typeNote: "Outfit for headings and big numbers: geometric, friendly and grown-up, set with slight negative tracking. DM Sans for body and controls at a comfortable 13–15px. The lowercase 'pomi' wordmark adds softness without cuteness.",
+    components: [
+      ["Buttons", "Pill-shaped, 52px tall for thumbs, dusty rose fill with white text and a soft coloured shadow. Presses scale to 97%."],
+      ["Cards", "Rounded 24px ceramic cards with a whisper of shadow, grouped by task. Tinted cards (clay, rose milk) carry guidance and reassurance."],
+      ["Inputs", "Big tappable chips and tiles with a gentle press-down; selected states fill with rose milk, gain a rose border and a check mark."],
+    ],
+    screens: {
+      welcome: "Layered soft circles form an abstract pomegranate. One promise per step, quick-pick chips ('Today', 'A week ago', '28 days', 'Not sure') get setup under 30 seconds.",
+      home: "A progress ring for the cycle day with its phase, two estimate tiles, four quick-log tiles that open the log in one tap, and a tinted 'For today' note.",
+      cycle: "A cycle ring of dots, one per day, with today raised. Below it, a rounded month view with period, estimate and fertile states, and a tap-to-log day card.",
+      log: "Grouped chip cards for one-handed use, flow tiles that fill like a droplet, a segmented energy pill and a sticky save button always within thumb reach.",
+      insights: "Friendly cards: average cycle with a mini bar chart, most-logged symptoms as tags with counts, and 'What we noticed' notes, each stating that predictions are estimates.",
+      settings: "A 'Private by design' summary card, grouped rounded lists with pill switches, and calm export and delete flows that are reversible until confirmed.",
+    },
+    premium: [
+      "Utility is the luxury: fewer taps, larger targets, nothing to learn.",
+      "Muted clay and rose feel like considered skincare packaging, not a toy box.",
+      "Rounded shapes are paired with grown-up type and plain language, so softness stays credible.",
+      "Every prediction is tagged 'est.' right where it appears, not buried in a help page.",
+    ],
+    different: [
+      "Rounded without being bubbly: no bouncing hearts, glitter or cartoon flowers.",
+      "Dusty rose replaces hot pink; the palette is tonal and quiet.",
+      "Speed and clarity come before decoration. The fastest log is two taps.",
+    ],
+  },
+];
+
+export const byId = (id) => DIRECTIONS.find((d) => d.id === id);

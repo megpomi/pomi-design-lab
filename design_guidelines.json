@@ -1,0 +1,215 @@
+{
+  "project_name": "Pomi - Premium Period Tracking Concept Exploration",
+  "app_type": "Concept Showcase & Design System Portfolio (Frontend Only)",
+  "brand_identity": {
+    "name": "Pomi",
+    "positioning": "Mature, restrained, honest, trustworthy, premium, calm, modern, and emotionally safe cycle tracking for discerning adults.",
+    "core_emotional_tone": "Warm luxury, quiet privacy, thoughtful health editorial, scientific clarity without clinical coldness.",
+    "anti_patterns_to_avoid": [
+      "No childish illustrations, cartoons, or cute mascots",
+      "No overly pink, hyper-girly or juvenile gradients",
+      "No cluttered, noisy dashboards or gamified streak badges",
+      "No cold, sterile hospital UI or scary medical warnings",
+      "No startup neon gradients or generic Vercel dark mode",
+      "No emoji characters in UI elements or navigation"
+    ]
+  },
+  "showcase_frame": {
+    "bg": "#FAF8F5",
+    "surface": "#FFFFFF",
+    "text_primary": "#1C1917",
+    "text_secondary": "#78716C",
+    "border": "#E7E2DA",
+    "accent": "#7D2638",
+    "typography": {
+      "heading_font": "Cormorant Garamond",
+      "body_font": "Plus Jakarta Sans",
+      "font_import": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    }
+  },
+  "directions": {
+    "almanac": {
+      "id": "almanac",
+      "title": "Direction 1: Almanac",
+      "tagline": "Warm Editorial Wellness",
+      "concept_description": "Inspired by botanical journals, vintage heavy-linen paper, and traditional print typography. Combines quiet literary authority with deeply personal body tracking.",
+      "typography": {
+        "heading_font": "Playfair Display",
+        "body_font": "Source Sans 3",
+        "google_fonts_link": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap",
+        "heading_style": "font-serif tracking-tight font-medium text-amber-950",
+        "body_style": "font-sans leading-relaxed text-amber-900/80"
+      },
+      "palette": {
+        "bg_primary": "#FDFBF7",
+        "bg_secondary": "#F7F3EC",
+        "surface": "#FFFFFF",
+        "surface_subtle": "#F2EBE1",
+        "text_main": "#2C1810",
+        "text_muted": "#6E5B53",
+        "accent_primary": "#7D2638",
+        "accent_hover": "#631E2C",
+        "accent_soft": "#F4E6E8",
+        "terracotta": "#C46D5E",
+        "warm_stone": "#D6CFC7",
+        "border": "#E8DFC5"
+      },
+      "styles": {
+        "border_radius": "rounded-md",
+        "card": "bg-[#FFFFFF] border border-[#E8DFC5] shadow-[0_4px_20px_-4px_rgba(125,38,56,0.06)] p-6",
+        "button_primary": "bg-[#7D2638] hover:bg-[#631E2C] text-[#FDFBF7] font-serif px-6 py-3 rounded-md transition-all shadow-sm hover:shadow-md",
+        "button_secondary": "bg-[#F7F3EC] hover:bg-[#F2EBE1] text-[#2C1810] border border-[#E8DFC5] font-serif px-5 py-2.5 rounded-md transition-all",
+        "input": "bg-[#FDFBF7] border border-[#E8DFC5] focus:border-[#7D2638] focus:ring-1 focus:ring-[#7D2638] rounded-md px-4 py-3 text-[#2C1810] placeholder-[#6E5B53]/50",
+        "chip": "bg-[#F4E6E8] text-[#7D2638] border border-[#7D2638]/20 rounded-full px-3 py-1 text-xs font-serif"
+      },
+      "visual_cues": "Serif headlines, dropped caps, subtle parchment textures, thin ruled dividers, botanical line illustrations, calm crimson ink accents."
+    },
+    "ledger": {
+      "id": "ledger",
+      "title": "Direction 2: Ledger",
+      "tagline": "Minimal Trust-Focused Clinical-Luxury",
+      "concept_description": "Combines scientific precision, Swiss structural grids, and high-end atelier aesthetic. Focuses on data density, privacy guarantees, and objective body awareness without emotional fluff.",
+      "typography": {
+        "heading_font": "Space Grotesk",
+        "body_font": "Inter",
+        "google_fonts_link": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap",
+        "heading_style": "font-sans tracking-tight font-semibold text-zinc-900",
+        "body_style": "font-sans leading-normal text-zinc-600"
+      },
+      "palette": {
+        "bg_primary": "#F4F4F2",
+        "bg_secondary": "#EAEAE8",
+        "surface": "#FFFFFF",
+        "surface_subtle": "#E5E5E2",
+        "text_main": "#18181B",
+        "text_muted": "#71717A",
+        "accent_primary": "#581825",
+        "accent_hover": "#3F101A",
+        "accent_soft": "#F2E8EA",
+        "graphite": "#2D2D2E",
+        "steel_rule": "#D4D4D0",
+        "border": "#DCDCD8"
+      },
+      "styles": {
+        "border_radius": "rounded-none",
+        "card": "bg-[#FFFFFF] border border-[#DCDCD8] p-6 shadow-none hover:border-[#2D2D2E] transition-colors",
+        "button_primary": "bg-[#581825] hover:bg-[#3F101A] text-[#F4F4F2] font-mono uppercase tracking-widest text-xs px-6 py-3 rounded-none transition-all",
+        "button_secondary": "bg-[#FFFFFF] hover:bg-[#EAEAE8] text-[#18181B] border border-[#DCDCD8] font-mono uppercase tracking-wider text-xs px-5 py-2.5 rounded-none transition-all",
+        "input": "bg-[#FFFFFF] border border-[#DCDCD8] focus:border-[#581825] focus:ring-0 rounded-none px-4 py-3 text-[#18181B] font-mono text-sm placeholder-[#71717A]",
+        "chip": "bg-[#2D2D2E] text-[#F4F4F2] font-mono uppercase text-[10px] tracking-widest px-2.5 py-1"
+      },
+      "visual_cues": "Sharp 0px borders, crisp tabular numbers, architectural hairline grids, high-contrast monochrome with deep berry focal points, zero rounded corners."
+    },
+    "bloom_kit": {
+      "id": "bloom_kit",
+      "title": "Direction 3: Bloom Kit",
+      "tagline": "Soft Modern Feminine Utility",
+      "concept_description": "Embraces warmth, tactile comfort, and organic rounded shapes. Feels like an intimate ceramic studio note or a high-end personal care kit.",
+      "typography": {
+        "heading_font": "Outfit",
+        "body_font": "DM Sans",
+        "google_fonts_link": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap",
+        "heading_style": "font-sans tracking-snug font-semibold text-stone-800",
+        "body_style": "font-sans leading-relaxed text-stone-600"
+      },
+      "palette": {
+        "bg_primary": "#F9F6F0",
+        "bg_secondary": "#F3EDE2",
+        "surface": "#FFFFFF",
+        "surface_subtle": "#EFE6DA",
+        "text_main": "#292524",
+        "text_muted": "#78716C",
+        "accent_primary": "#C88A8A",
+        "accent_hover": "#B27373",
+        "accent_soft": "#FAECEC",
+        "muted_clay": "#D9A796",
+        "soft_sand": "#E8DEC9",
+        "border": "#E6DDD0"
+      },
+      "styles": {
+        "border_radius": "rounded-2xl",
+        "card": "bg-[#FFFFFF] border border-[#E6DDD0] shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-6",
+        "button_primary": "bg-[#C88A8A] hover:bg-[#B27373] text-[#FFFFFF] font-medium rounded-xl px-6 py-3 transition-all shadow-sm hover:shadow-md",
+        "button_secondary": "bg-[#F3EDE2] hover:bg-[#EFE6DA] text-[#292524] border border-[#E6DDD0] font-medium rounded-xl px-5 py-2.5 transition-all",
+        "input": "bg-[#F9F6F0] border border-[#E6DDD0] focus:border-[#C88A8A] focus:ring-2 focus:ring-[#C88A8A]/20 rounded-xl px-4 py-3 text-[#292524] placeholder-[#78716C]/60",
+        "chip": "bg-[#FAECEC] text-[#C88A8A] font-medium rounded-full px-3.5 py-1.5 text-xs border border-[#C88A8A]/30"
+      },
+      "visual_cues": "Generous 16px-24px rounded corners, pill chips, ceramic tone backgrounds, subtle organic shadows, smooth tactile interactions."
+    }
+  },
+  "interactive_mockup_screens": [
+    {
+      "id": "welcome_onboarding",
+      "name": "1. Welcome & Onboarding",
+      "purpose": "Establish trust immediately with clear data privacy commitments (no third-party tracking, zero ad sales) and cycle baseline setup."
+    },
+    {
+      "id": "home",
+      "name": "2. Today's Dashboard",
+      "purpose": "Display current cycle day, phase forecast (Luteal, Follicular, Ovulation, Menstrual), probability ring/bar, and quick symptom logging trigger."
+    },
+    {
+      "id": "cycle_overview",
+      "name": "3. Cycle Timeline",
+      "purpose": "Provide a clean, elegant phase calendar visualizer showing phase transitions, fertility window, and symptom density history."
+    },
+    {
+      "id": "symptom_logging",
+      "name": "4. Symptom Log",
+      "purpose": "Allow users to tap symptoms (Flow, Energy, Mood, Physical, Sleep) with interactive intensity selectors, updating live state in localStorage."
+    },
+    {
+      "id": "insights_why_premium",
+      "name": "5. Insights & Trust",
+      "purpose": "Present calm health analysis, hormone pattern correlations, and explain 'Why Pomi is Premium & Trustworthy' (Zero data monetization, offline encryption)."
+    },
+    {
+      "id": "settings_differentiation",
+      "name": "6. Settings & Comparison",
+      "purpose": "Settings panel highlighting export options, biometric lock, and explicit comparison of Pomi vs. typical pink juvenile trackers."
+    }
+  ],
+  "image_urls": {
+    "editorial_pomegranate": "https://images.pexels.com/photos/7703266/pexels-photo-7703266.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "botanical_linen": "https://images.pexels.com/photos/8101546/pexels-photo-8101546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "minimal_ceramic": "https://images.pexels.com/photos/7663203/pexels-photo-7663203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "soap_bar_ceramic": "https://images.pexels.com/photos/6690163/pexels-photo-6690163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "layout_and_architecture": {
+    "structure": "Single-page React App with dynamic tab navigation for showcase views:",
+    "views": [
+      {
+        "id": "overview",
+        "title": "Direction Showcase Landing",
+        "description": "Hero section introducing Pomi concept exploration, followed by 3 comprehensive Direction Cards with quick preview links."
+      },
+      {
+        "id": "direction-detail",
+        "title": "Interactive Direction Explorer",
+        "description": "Left/Center: High-fidelity interactive Mobile Phone Mockup running all 6 screens. Right: Comprehensive Rationale Panel dissecting the typography, color psychology, UX choices, and contrast decisions for that specific direction."
+      },
+      {
+        "id": "compare",
+        "title": "3-Direction Side-by-Side Matrix",
+        "description": "Synchronized screen switcher showing the exact same screen (e.g. Symptom Logging or Today's Dashboard) side-by-side across Almanac, Ledger, and Bloom Kit to evaluate layout and tone differences."
+      }
+    ]
+  },
+  "accessibility_and_testing": {
+    "test_id_rules": "All interactive elements (buttons, inputs, tabs, screen switchers, direction cards) MUST have explicit data-testid attributes formatted in kebab-case.",
+    "examples": [
+      "data-testid=\"nav-direction-almanac\"",
+      "data-testid=\"mockup-screen-symptom-log\"",
+      "data-testid=\"log-symptom-energy-medium\"",
+      "data-testid=\"compare-view-toggle\""
+    ],
+    "contrast_standard": "All body text and interactive states must pass WCAG AA (4.5:1 minimum ratio). Dark text on light cream or off-white backgrounds; deep crimson/berry for primary CTAs with white text."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid AI slop: maintain clear hierarchy, sophisticated whitespace, and subtle micro-interactions.",
+    "Do not import standard Inter font for headlines. Use Playfair Display for Almanac, Space Grotesk for Ledger, and Outfit for Bloom Kit.",
+    "Store symptom logging data in browser localStorage so logs persist when switching screens or directions.",
+    "Ensure the mobile phone mockup frame responds nicely on desktop and tablet screens.",
+    "Include an explicit 'Why Premium & Trustworthy' breakdown modal or section explaining privacy architecture."
+  ]
+}
