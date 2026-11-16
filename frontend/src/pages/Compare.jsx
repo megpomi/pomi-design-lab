@@ -37,7 +37,7 @@ export default function Compare() {
           <h1 className="mt-4 ff-corm text-5xl sm:text-6xl leading-[0.95] tracking-tight">One moment, <span className="italic text-[#7D2638]">three voices.</span></h1>
           <p className="mt-4 max-w-lg text-[15px] text-[#57534E]">Pick a screen to see how each direction handles it. Tapping inside any phone moves all three together.</p>
         </div>
-        <div className="flex gap-1 overflow-x-auto no-scrollbar p-1 rounded-full bg-[#EFEAE2] self-start lg:self-auto" data-testid="compare-screen-selector">
+        <div className="flex gap-1 overflow-x-auto no-scrollbar p-1 rounded-full bg-[#EFEAE2] max-w-full self-start lg:self-auto" data-testid="compare-screen-selector">
           {SCREENS.map((s) => (
             <button key={s.id} onClick={() => setScreen(s.id)} data-testid={`compare-screen-${s.id}`} className={`h-9 px-4 rounded-full text-[13px] whitespace-nowrap transition-colors duration-200 ${screen === s.id ? "bg-[#1C1917] text-[#FAF8F5]" : "text-[#57534E] hover:text-[#1C1917]"}`}>{s.label}</button>
           ))}

@@ -1,0 +1,32 @@
+{
+  "summary": "Frontend-only E2E test of the Pomi concept showcase (no backend). I checked the landing page, header nav, all 3 direction pages (welcome/onboarding, screen jumper, rationale sections and screen links, in-phone tab bar, logging, cycle calendar, insights, settings toggles/export/delete/reset, page-level reset), localStorage persistence and per-direction separation, the compare page sync, and the mobile 390px layout. All core flows pass. No JS page errors. The only defect found is horizontal overflow on /compare at 390px.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "Compare screen selector (mobile)", "issue": "At 390px, document.scrollWidth is 492 against a 390 viewport, so the page scrolls sideways. The compare-screen-selector div (overflow-x-auto) has no max-w-full/min-w-0, so it grows to its content width (about 492px) and its own scroll never kicks in. Fix: add max-w-full (or w-full min-w-0) to the selector div in Compare.jsx line 40.", "selector": "[data-testid='compare-screen-selector']", "priority": "MEDIUM"}
+    ],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Header nav at 390px", "issues": ["The nav scrolls sideways and the last item 'Compare' is cut off at the right edge ('Comp'), with no fade or other hint that it scrolls. Consider shorter labels, a fade mask, or a compact menu on mobile."]},
+      {"screen": "Insights (all directions)", "issues": ["The average cycle length is always 28.2 because history() uses fixed LENGTHS. It ignores the cycle length chosen in onboarding (e.g. 29 or 35), so after onboarding the home screen says '/29' while Insights says 'avg 28.2'. Acceptable for a concept, but it is inconsistent."]}
+    ]
+  },
+  "test_report_links": ["/app/tests/pomi_direction_flow.py"],
+  "action_items": [
+    "Compare.jsx: add max-w-full to the compare-screen-selector container to remove the page's horizontal overflow at 390px",
+    "Optional: make it clearer on mobile that the header nav scrolls (the 'Compare' link is cut off at 390px)",
+    "Optional: build the insights history from profile.cycleLength so the average reflects onboarding input"
+  ],
+  "critical_code_review_comments": [
+    "pomi.js usePomi: each component that calls usePomi(dir) has its own state, and they only share data through localStorage on mount. Today that is fine because each page mounts one instance per direction. If two instances of the same direction ever end up on one page, the last write wins and the other instance goes stale.",
+    "cycleInfo with a lastPeriod in the future would give a negative day. The UI only offers past days, so this cannot happen now, but there is no guard.",
+    "Almanac/Ledger/Bloom are each about 450 lines and repeat the same screen logic (Welcome/Log/Settings structure). That is acceptable because each has its own visual language, and the shared hooks in pomi.js already avoid most duplicated logic."
+  ],
+  "updated_files": ["/app/tests/pomi_direction_flow.py"],
+  "success_rate": {"backend": "N/A", "frontend": "97%"},
+  "seed_data_creation": "None. The tests cleared localStorage only in the test browser context; entries with a TEST_ prefix were written to localStorage in that context only.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "/app/tests/pomi_direction_flow.py is a Playwright body covering the full flow for each direction (exec it inside an async wrapper in browser_automation). Ledger home-today-entry shows the summary chips but not the note. Bloom home-today-entry shows a count ('N logged today'), so assert note text through {p}-log-note input_value or through localStorage instead. Onboarding: choosing today-10 gives 'Day 11' on all directions. A fresh direction has 10 sample entries.",
+  "rca of the issue": "Compare overflow: a flex child with overflow-x-auto and no width constraint sizes itself to its intrinsic content width inside a flex-col parent, which widens the document."
+}

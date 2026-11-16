@@ -65,14 +65,15 @@ export function monthGrid(y, m) {
   return cells;
 }
 
-const LENGTHS = [29, 27, 30, 28, 27, 28];
+const OFFSETS = [1, -1, 2, 0, -1, 0];
 const PERIODS = [5, 4, 5, 5, 6, 5];
 export function history(profile) {
   let start = fromIso(profile.lastPeriod);
   const out = [];
-  for (let i = LENGTHS.length - 1; i >= 0; i--) {
-    start = addDays(start, -LENGTHS[i]);
-    out.unshift({ start, length: LENGTHS[i], period: PERIODS[i] });
+  for (let i = OFFSETS.length - 1; i >= 0; i--) {
+    const length = profile.cycleLength + OFFSETS[i];
+    start = addDays(start, -length);
+    out.unshift({ start, length, period: PERIODS[i] });
   }
   return out;
 }

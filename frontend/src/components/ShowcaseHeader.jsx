@@ -11,10 +11,10 @@ export const ShowcaseHeader = () => (
         <span className="ff-corm italic text-[26px] text-[#7D2638] leading-none">Pomi</span>
         <span className="hidden sm:inline text-[11px] uppercase tracking-[0.22em] text-[#78716C]">Visual directions</span>
       </Link>
-      <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar">
+      <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar min-w-0">
         {DIRECTIONS.map((d) => (
           <NavLink key={d.id} to={`/direction/${d.id}`} className={linkCls} data-testid={`nav-direction-${d.id}`}>
-            <span className="hidden md:inline text-[#A8A29E] mr-1">{d.num}</span>{d.name}
+            <span className="hidden md:inline text-[#A8A29E] mr-1">{d.num}</span><span className="sm:hidden">{d.num}</span><span className="hidden sm:inline">{d.name}</span>
           </NavLink>
         ))}
         <NavLink to="/compare" className={linkCls} data-testid="nav-compare">Compare</NavLink>
